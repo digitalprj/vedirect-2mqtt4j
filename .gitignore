@@ -1,0 +1,5 @@
+# Project exclude paths
+.DS_Store
+.idea
+/target/
+/copytopi.command
