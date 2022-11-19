@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class Main {
 
-    // init a shutdown safe LogManager to log messages during shutdown
+    // init logging
     static {
         try (InputStream stream = Main.class.getResourceAsStream("/logging.properties")) {
             LogManager.getLogManager().readConfiguration(stream);
