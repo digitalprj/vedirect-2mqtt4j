@@ -23,7 +23,7 @@ Clone this repository, then install it to your local maven:
 ```
 mvn install
 ```
-add a dependecy in your project
+add dependency in your project
 ```
 <dependency>
     <groupId>info.digitalproject</groupId>
