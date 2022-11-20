@@ -62,7 +62,7 @@ public class Main {
 
         // start the VeDirect2Mqtt service
         VeDirect2Mqtt veDirect2Mqtt = new VeDirect2Mqtt(options);
-        veDirect2Mqtt.setPublishFilter(new ChangedVoltageFilter());
+        veDirect2Mqtt.setPublishFilter(new AverageVoltageFilter());
         veDirect2Mqtt.runAsync();
 
         // wait for enter key
