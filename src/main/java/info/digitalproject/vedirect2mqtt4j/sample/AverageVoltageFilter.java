@@ -43,7 +43,7 @@ public class AverageVoltageFilter implements PublishFilter {
     @Override
     public VeDirectRecord execute(VeDirectRecord record) {
 
-        // get current voltage
+        // get current voltage (mV as integer)
         String voltageStr = (String) record.get("V");
         if (voltageStr != null && voltageStr.length() > 0) {
 
@@ -54,8 +54,8 @@ public class AverageVoltageFilter implements PublishFilter {
             // add to moving average
             avgVoltage.addData(voltage);
 
-            // get the mean value and divide by 10 to get rid of high frequent changes
-            int mean = avgVoltage.getMean() / 10;
+            // get the mean value and round it to one decimal place
+            int mean = (avgVoltage.getMean() + 50) / 100;
 
             // mean differs from previous published voltage?
             if (mean != preVoltage) {
@@ -63,7 +63,7 @@ public class AverageVoltageFilter implements PublishFilter {
                 logger.info("Voltage changed "+preVoltage+" -> "+mean+" ...publish record!");
 
                 // set mean voltage to current record
-                record.put("V", mean * 10);
+                record.put("V", mean);
 
                 // store current mean for next run
                 preVoltage = mean;
