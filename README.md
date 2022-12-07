@@ -1,9 +1,9 @@
-Sample usage of vedirect2mqtt4j library.
+Sample usage of vedirect-2mqtt4j library.
 
-Demonstrate the usage of vedirect2mqtt4j with a console application.
+Demonstrate the usage of vedirect-2mqtt4j with a console application.
 The application starts the VeDirect2MQTT service and waits until the user press enter key to gracefully stop the service and quit the application.
 
-Build the application with `mvn package` to get a *vedirect2mqtt4j-sample-1.0-SNAPSHOT.jar* and a *vedirect2mqtt4j-sample-1.0-SNAPSHOT-jar-with-dependencies.jar*
+Build the application with `mvn package` to get a *vedirect-2mqtt4j-sample-1.0-SNAPSHOT.jar* and a *vedirect-2mqtt4j-sample-1.0-SNAPSHOT-jar-with-dependencies.jar*
 with all dependencies.
 
 The application takes two arguments:
@@ -14,6 +14,6 @@ The application takes two arguments:
 
 example usage: 
 ```
-java -jar vedirect2mqtt4j-sample-1.0-SNAPSHOT-jar-with-dependencies.jar ttyUSB0 tcp://raspberrypi:1883
+java -jar vedirect-2mqtt4j-sample-1.0-SNAPSHOT-jar-with-dependencies.jar ttyUSB0 tcp://raspberrypi:1883
 ```
 
